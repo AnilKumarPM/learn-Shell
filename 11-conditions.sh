@@ -12,7 +12,7 @@ echo "Proceeding...."
 
 dnf install nginxxx -y
 
-dnf install mysql -y
+dnf install mysqlll -y
 
 echo "Still Proceeding...."
 
