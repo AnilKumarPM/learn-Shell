@@ -10,5 +10,9 @@ fi
 
 echo "Proceeding...."
 
-dnf install nginx -y
+dnf install nginxxx -y
+
+dnf install mysql -y
+
+echo "Still Proceeding...."
 
