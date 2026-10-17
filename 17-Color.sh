@@ -4,9 +4,9 @@ user_id=$(id -u)
 logs_folder="/var/log/shell-practice"
 logs_file="${logs_folder}/${0}.log"
 R="\e[31m"
-G="\e[31m"
-Y="\e[31m"
-N="\e[31m"
+G="\e[32m"
+Y="\e[33m"
+N="\e[0m"
 
 if [ $user_id -ne 0 ]; then
     echo "Please run this script with sudo access.."
