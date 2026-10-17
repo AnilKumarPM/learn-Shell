@@ -13,7 +13,7 @@ fi
 
 mkdir -p $logs_folder 
 
-echo "Script started execution  at : ${date +"%F %T"} "
+echo "Script started execution  at : $(date +"%F %T") "
 
 validate()
 {
