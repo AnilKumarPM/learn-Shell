@@ -4,9 +4,9 @@ user_id=$(id -u)
 logs_folder="/var/log/shell-practice"
 logs_file="${logs_folder}/${0}.log"
 R="\e[31m"
-G="\e[32m"
-Y="\e[33m"
-N="\e[0m"
+G="\e[31m"
+Y="\e[31m"
+N="\e[31m"
 
 if [ $user_id -ne 0 ]; then
     echo "Please run this script with sudo access.."
@@ -22,18 +22,21 @@ validate(){
         echo -e "${2}..${R}FAILED${N}" | tee -a $logs_file
         exit 1
     else
-        echo -e "${2}..${G}SUCCESS${N}" | tee -a $logs_file
+        echo -e "${2}..${G}SUCCESS{N}" | tee -a $logs_file
     fi
 }
 
 for package in $@
 do
-    dnf list installed $package &>> $logs_file
-    if [ $? -ne 0 ]; then
-        echo "Going to install: ${package}"
-        dnf install $package -y &>> $logs_file
-        validate $? "Installing ${package}"
-    else
-        echo -e "${package} already installed...${Y}SKIPPING${N}"
-    fi
+ 
+ dnf list installed $package  &>> $logs_file
+
+ if [ $? -ne 0 ]; then
+    echo "Going to Install : ${package}"
+    dnf install $package -y &>> $logs_file 
+    validate $? "Installing ${package}"
+else
+    echo -e "${package} already installed....${Y}SKIPPING{N}"
+ fi
+
 done
