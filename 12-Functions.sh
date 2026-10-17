@@ -20,6 +20,7 @@ validate()
 
      echo "$2...SUCCESS"
      exit 1 
+    fi
 }
 
 echo "Proceeding..."
