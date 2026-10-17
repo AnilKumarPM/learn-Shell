@@ -4,7 +4,7 @@ user_id=$(id -u)
 logs_folder="/var/log/shell-practice"
 logs_file="${logs_folder}/${0}.log"
 
-R= "\e[31m"
+R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
 N="\e[0M"
