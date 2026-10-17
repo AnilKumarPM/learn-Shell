@@ -21,14 +21,14 @@ else
      echo "nginx installation is success..."
 
 fi
-dnf install mysqlll -y
+dnf install mysql -y
 
 if [ $? -ne 0 ]; then
 
-    echo "mysql installation is failed..."
+    echo "mysql client installation is failed..."
      exit 1
 else 
-    echo "mysql installation is Success..."
+    echo "mysql client installation is Success..."
 
 fi
 
