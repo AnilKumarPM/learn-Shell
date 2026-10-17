@@ -19,7 +19,7 @@ validate()
     else
 
      echo "$2...SUCCESS"
-     exit 1
+     exit 1 
 }
 
 echo "Proceeding..."
