@@ -10,7 +10,7 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
-#trap 'echo "Error at $LINENU", command: "$BASH_COMMAND"' ERR
+trap 'echo "Error at $LINENU", command: "$BASH_COMMAND"' ERR
 
 if [ $user_id -ne 0 ]; then
     echo "Please run this script with sudo access.."
