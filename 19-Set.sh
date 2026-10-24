@@ -25,7 +25,7 @@ echo "Script started execution at $(date +"%F %T")" &>> $logs_file
 for package in $@
 do
  
- dnf list installed $package  &>> $logs_file
+ dnf module list installed $package  &>> $logs_file
 
  if [ $? -ne 0 ]; then
     echo "Going to Install : ${package}"
